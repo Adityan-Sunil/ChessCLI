@@ -105,7 +105,7 @@ def pve_game():
     engine.quit()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(prog="ChessCLI", formatter_class=RawTextHelpFormatter, usage='%(prog)s [options]', description="An all in one interface for the ancient game of chess. Play against your friend, computer or analyze PGN documents using %(prog)s \n To play against friend use the Game Mode: pvp To analyze a PGN doc use the Game Mode: pgn \n To play against engine use the Game Mode: pve\n")
+    parser = argparse.ArgumentParser(prog="ChessCLI", formatter_class=RawTextHelpFormatter, usage='%(prog)s [options]', description="An all in one interface for the ancient game of chess. Play against your friend, computer or analyze PGN documents using %(prog)s \n To play against friend use the Game Mode: \tpvp \n To analyze a PGN doc use the Game Mode: \tpgn \n To play against engine use the Game Mode: \tpve\n")
 
     parser.add_argument("Game_mode", type=str, help="[pvp, pve, pgn] Game Mode to start the application")
 
