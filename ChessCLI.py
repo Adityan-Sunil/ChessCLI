@@ -86,11 +86,13 @@ def getMove(board):
 def pve_game():
     engine = chess.engine.SimpleEngine.popen_uci("stockfish")
     board = chess.Board()
+    resetBoard()
     user = input("Choose your Color (b/w)")
     if user not in ["b", "w"]:
         print("Computer wins")
     else:
         if user == "w":
+            print(board)
             getMove(board)
     while not board.is_game_over():
         system('cls')
@@ -123,5 +125,5 @@ if __name__ == "__main__":
         print("Starting a PGN Simulation Session")
         path = args.Path_to_PGN
         if args.Path_to_PGN == "":
-            path = input("Enter Path to PGN file")
+            path = input("Enter Path to PGN file: ")
         pgn_game(path)
